@@ -138,10 +138,10 @@ export TEST_PATH="./output/SNLI_bert-base-uncased_easyWoMislabeled_ambig.json"
 
 python3 calibrate.py \
 	--test_path $TEST_PATH \
-	--do_train
+	--do_evaluate
 ```
 
-## Ablation Study Code
+## Ablation Study
 To conduct an ablation study, we run MixUp on 66\% train set (i.e., conduct MixUp operation between randomly selected samples on 66% train set, which is the union of the top 33% easy-to-learn and the top 33\% ambiguous samples). To do this, execute following scripts and compare the results with our proposed method. 
 
 
