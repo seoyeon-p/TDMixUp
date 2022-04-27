@@ -7,7 +7,6 @@ If you would like to refer to it, please cite the paper mentioned above.
 ## Getting Started
 In order to run the code, you have to prepare top 33% easy-to-learn and top 33% ambiguous samples using [this repository]('https://github.com/allenai/cartography'). We use dataset released by [https://github.com/shreydesai/calibration](https://drive.google.com/file/d/1ro3Q7019AtGYSG76KeZQSq35lBi7lU3v/view). Note that our implementation is based on the implementation provided by [this repository](https://github.com/shreydesai/calibration)
 
-# Instructions
 
 ## Requirements
 Configure the environments using below command. Our experiments are done by using python 3.6:
