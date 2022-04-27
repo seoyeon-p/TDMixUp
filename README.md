@@ -5,11 +5,11 @@ This repo contains codes for the following paper:
 If you would like to refer to it, please cite the paper mentioned above.
 
 ## Getting Started
-In order to run the code, you have to prepare top 33% easy-to-learn and top 33% ambiguous samples using [this repository](https://github.com/allenai/cartography). We use dataset released by [https://github.com/shreydesai/calibration](https://drive.google.com/file/d/1ro3Q7019AtGYSG76KeZQSq35lBi7lU3v/view). Note that our implementation is based on the implementation provided by [this repository](https://github.com/shreydesai/calibration)
+In order to run the code, you have to prepare top 33% easy-to-learn and top 33% ambiguous samples using [this repository](https://github.com/allenai/cartography). We use the dataset released by [https://github.com/shreydesai/calibration](https://drive.google.com/file/d/1ro3Q7019AtGYSG76KeZQSq35lBi7lU3v/view). Note that our implementation is based on the implementation provided by [this repository](https://github.com/shreydesai/calibration)
 
 
 ## Requirements
-Configure the environments using below command. Our experiments are done by using python 3.6:
+Configure the environments using the below command. Our experiments are done by using python 3.6:
 
 ```
 pip install -r requirements.txt
@@ -52,7 +52,7 @@ python3 train.py \
 
 ```
 
-After you finish fine-tuning BERT measuring AUMs on a subset of training samples (by inserting fake data which are samples reassigned their labels to classes that are different from the original labels including non-existing class), we filter out possibly mis-labeled samples in the most easy-to-learn instances by executing the following scripts. 
+After you finish fine-tuning BERT measuring AUMs on a subset of training samples (by inserting fake data which are samples reassigned their labels to classes that are different from the original labels including non-existing classes), we filter out possibly mis-labeled samples in the most easy-to-learn instances by executing the following scripts. 
 
 
 ```
@@ -64,11 +64,11 @@ python3 refine_dataset_using_threshold_aum.py \
     --sampling_ratio 0.8     
 ```
 
-After these process, you will get train_easy33_bert_woMislabeled.tsv file in the calibration_data folder. In our method, we use sampling_ratio as 0.8 for SNLI, 0.8 for QQP, and 0.5 for SWAG.
+After this process, you will get train_easy33_bert_woMislabeled.tsv file in the calibration_data folder. In our method, we use sampling_ratio as 0.8 for SNLI, 0.8 for QQP, and 0.5 for SWAG.
 
 
 ## MixUp
-Then, we conduct an MixUp in between the most easy-to-learn applied with AUM and the most ambiguous samples by using following scripts. 
+Then, we conduct a MixUp in between the most easy-to-learn applied with AUM and the most ambiguous samples by using the following scripts. 
 
 ```
 export DEVICE=0
@@ -106,7 +106,8 @@ python3 train.py \
 
 ## Evaluating on in-, out-of-domain test sets
 
-To evaluate fine-tuned model on out-of-domain test set, execute below scripts
+To evaluate the fine-tuned model on an out-of-domain test set, execute the below scripts
+
 ```
 export DEVICE=0
 export MODEL="bert-base-uncased"  
@@ -142,7 +143,7 @@ python3 calibrate.py \
 ```
 
 ## Ablation Study
-To conduct an ablation study, we run MixUp on 66\% train set (i.e., conduct MixUp operation between randomly selected samples on 66% train set, which is the union of the top 33% easy-to-learn and the top 33\% ambiguous samples). To do this, execute following scripts and compare the results with our proposed method. 
+To conduct an ablation study, we run MixUp on 66\% train set (i.e., conduct MixUp operation between randomly selected samples on 66% train set, which is the union of the top 33% easy-to-learn and the top 33\% ambiguous samples). To do this, execute the following scripts and compare the results with our proposed method. 
 
 
 ```
