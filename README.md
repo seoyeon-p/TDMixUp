@@ -1,6 +1,6 @@
 This repo contains codes for the following paper:
 
-<it>Seo Yeon Park, Cornelia Cargaea</it> : A Data Cartography based MixUp for Pre-trained Language Models (NAACL 2022)
+<it>Seo Yeon Park, Cornelia Caragea</it> : A Data Cartography based MixUp for Pre-trained Language Models (NAACL 2022)
 
 If you would like to refer to it, please cite the paper mentioned above.
 
