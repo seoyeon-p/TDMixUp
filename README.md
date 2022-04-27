@@ -12,7 +12,7 @@ In order to run the code, you have to prepare top 33% easy-to-learn and top 33% 
 Configure the environments using below command. Our experiments are done by using python 3.6:
 
 ```
-$pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 
