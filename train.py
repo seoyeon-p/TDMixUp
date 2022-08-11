@@ -678,7 +678,7 @@ else:
                 threshold_id.append(i3)
             for item in threshold_id:
                 if item in original_id:
-                    print("Duplicated items between threshold samples and original samples, Update required for dataset format!")
+                    print("There are duplicated items between threshold samples and original samples, Please check dataset!")
                     exit()
             print(f'train original samples = {len(d1)}')
             print(f'train threshold samples = {len(d2)}')
